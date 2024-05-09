@@ -74,8 +74,9 @@ height: 300px;
 </head>
 <body>
 <div class="navigation">
-<div class="site-title"><a href='index.html' rel='home'>𝔽𝕠𝕟𝕥𝕔𝕙𝕒𝕟𝕘𝕖𝕣.𝕤𝕥𝕪𝕝𝕖</a></div>
-<div class="menu">
+   <div class="site-title"><a href='index.html' rel='home'>
+      <img class="logo" src="img/Font Changer.png" alt="img"></a>
+  </div><div class="menu">
 <input class="menu-btn" type="checkbox" id="menu-btn"/>
 <label class="menu-icon" for="menu-btn"><span>&#9776;</span></label>
 <div class="menu-links">    
@@ -261,6 +262,32 @@ height: 300px;
 </div>
 </div>
 </div>
+
+<div class="social-stack">
+   <!-- Add your social media icons here -->
+   <a href="#" class="social-icon facebook-icon"></a>
+   <a href="#" class="social-icon twitter-icon"></a>
+   <a href="#" class="social-icon instagram-icon"></a>
+   <!-- Add more social media icons as needed -->
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+   var socialStack = document.querySelector(".social-stack");
+
+   window.addEventListener("scroll", function() {
+       // Get the current scroll position
+       var scrollY = window.scrollY || window.pageYOffset;
+
+       // If the scroll position is greater than a certain threshold, fix the social stack
+       if (scrollY > 100) { // Adjust the threshold as needed
+           socialStack.style.top = "20px"; // Adjust the top position as needed
+       } else {
+           socialStack.style.top = "50%"; // Reset to original position
+       }
+   });
+});
+</script>
 
 <div class="font-types">
 <p>More Fonts</p>

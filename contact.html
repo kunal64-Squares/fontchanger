@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
     position: unset
 }
 .navigation{
-    background: #ff914d;
+    background: #090549;
     padding: 10px;
     color: #fff;
 }
@@ -85,8 +85,10 @@ footer a {
 }
 
 footer a:hover {
-    color: #ff914d;
+    color: #090549;
 }
+
+
 .footerlink {
     display: inline-block;
     font-size: 16px;
@@ -115,7 +117,7 @@ footer a:hover {
     text-decoration: none
 }
 aside {
-    background: #ff914d;
+    background: #090549;
     padding: 0.3em 1em;
     border-radius: 3px;
     color: #fff;
@@ -138,7 +140,8 @@ textarea {
   color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: #ff914d;
+  background: #090549;
+
 }
 .button-xlarge {
   font-size: 125%;
@@ -173,6 +176,10 @@ form{
         display: block;
         margin: 10px 0
     }
+    .logo {
+    max-width: 100%;
+    height: auto; /* Ensures that the image's aspect ratio is maintained */
+}
   .page {
         padding: 25px;
         width: 65%
@@ -185,7 +192,9 @@ form{
 </head>
 <body>
 <div class="navigation">
-<div class="site-title"><a href='index.html' rel='home'>𝔽𝕠𝕟𝕥𝕔𝕙𝕒𝕟𝕘𝕖𝕣.𝕤𝕥𝕪𝕝𝕖</a></div>
+    <div class="site-title"><a href='index.html' rel='home'>
+        <img class="logo" src="img/Font Changer.png" alt="img"></a>
+    </div>
 <div class="menu">
 <input class="menu-btn" type="checkbox" id="menu-btn"/>
 <label class="menu-icon" for="menu-btn"><span>&#9776;</span></label>
@@ -212,7 +221,7 @@ form{
 <textarea id="message" name="message" rows="10" required placeholder="Tell us what's on your mind..."></textarea></fieldset>
 <fieldset style="display: none;">
 <label for="from">From: </label>
-<input id="from" name="From" value="fontchanger.net" disabled/>
+<input id="from" name="From" value="fontchanger.style" disabled/>
 </fieldset>
 <button class="button-success pure-button button-xlarge">Send</button></div>
 <div class="thankyou_message" style="display:none;">

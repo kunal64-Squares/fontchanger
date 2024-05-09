@@ -124,17 +124,55 @@ function backward(text) {
     }
 
     
-    function copy(that) {
-        const textToCopy = that.value;
-        navigator.clipboard.writeText(textToCopy)
-            .then(() => {
-                alert('Text copied to clipboard');
-            })
-            .catch((error) => {
-                console.error('Unable to copy text to clipboard:', error);
-            });
-    }
     
+    function copy(element) {
+      let textToCopy = element.value;
+    
+      // Select and temporarily show the 'Text Copied!' message
+      $('#copymsg').show().text('Text Copied!');
+    
+      // Code to copy text to clipboard
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+          console.error('Could not copy text: ', err);
+        });
+    
+      // Hide the 'copied' message after few seconds
+      setTimeout(function () { 
+          $('#copymsg').hide(); 
+      }, 1000); 
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var scrollTopButton = document.querySelector("#scrolltop");
+  
+      // Function to handle scroll to top
+      function scrollToTop() {
+          window.scrollTo({
+              top: 0,
+              behavior: "smooth" // Smooth scrolling behavior
+          });
+      }
+  
+      // Event listener for click on scroll top button
+      scrollTopButton.addEventListener("click", function(event) {
+          event.preventDefault(); // Prevent default anchor behavior
+          scrollToTop();
+      });
+  
+      // Show/hide scroll top button based on scroll position
+      window.addEventListener("scroll", function() {
+          // Display scroll top button when scrolled beyond 100px from top
+          if (window.scrollY > 100) {
+              scrollTopButton.style.display = "block";
+          } else {
+              scrollTopButton.style.display = "none";
+          }
+      });
+  });
     
     function crazyWithFlourishOrSymbols(text) {
       if(Math.random() < 0.7) return wrapInSymbols(crazifyText(text), 2);

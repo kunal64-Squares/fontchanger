@@ -22,7 +22,7 @@ h4 {
 }
 
 .navigation {
-    background: #ff914d;
+    background: #090549;
     padding: 10px;
     color: #fff
 }
@@ -74,8 +74,6 @@ h4 {
 .fc-text {
     padding: 5px 0;
     margin-bottom: 10px;
-    background: #ff914d;
-    box-shadow: 0 5px 5px 0 rgb(0 0 0 / .2);
     z-index: 999;
     position: sticky;
     top: 0
@@ -89,15 +87,15 @@ h4 {
     width: 90%;
     margin-top: 5px;
     background-color: #fff;
-    color: #ff914d;
+    color: #000000;
     border-radius: 5px;
     outline: 0;
     resize: none
 }
 
 .fancytext:focus {
-    border-color: #000000;
-    border-width: 2px
+    border-color: #090549;
+    border-width: 7px
 }
 
 .social-link,
@@ -132,7 +130,7 @@ h4 {
 
 .font-types {
     font-family: arial, sans-serif;
-    color: #ff914d;
+    color: #38B6FF;
     font-size: 24px;
     font-weight: 700;
     margin-block-start: 0;
@@ -157,7 +155,7 @@ h4 {
 }
 
 input:focus {
-    border-color: #ff914d
+    border-color: #090549
 }
 
 input {
@@ -177,8 +175,8 @@ input {
 }
 
 input:hover {
-    color: #ff914d;
-    border-color: #ff914d;
+    color: #38B6FF;
+    border-color: #38B6FF;
     text-shadow: 1px 1px 1px #00000045
 }
 
@@ -188,7 +186,7 @@ input:hover {
     bottom: 17%;
     right: 15px;
     font-size: 18px;
-    background-color: #ff914d;
+    background-color: #090549;
     color: #fff;
     cursor: pointer;
     padding: 10px;
@@ -196,7 +194,7 @@ input:hover {
 }
 
 #scrolltop:hover {
-    background-color: #ff914d;
+    background-color: #38B6FF;
 }
 
 #copymsg {
@@ -206,7 +204,7 @@ input:hover {
     width: 100px;
     right: 0;
     bottom: 24%;
-    background: #ff914d;
+    background: #090549;
     color: #fff;
     padding: 15px;
     border-radius: 5px 0 0 5px;
@@ -215,7 +213,7 @@ input:hover {
 
 .more-btn {
     color: #fff;
-    background-color: #ff914d;
+    background-color: #090549;
     font-family: sans-serif;
     cursor: pointer;
     font-size: 22px;
@@ -223,25 +221,30 @@ input:hover {
     text-decoration: none;
     text-align: center;
     padding: 8px 15px;
-    border: 2px solid #ff914d;
+    border: 2px solid #090549;
     border-radius: 10px;
     box-shadow: 0 1px 2px 2px rgb(0 1 1 / .15)
 }
 
 .more-btn:hover {
-    color: #ff914d;
+    color: #38B6FF;
     background-color: #fff
+}
+
+.logo {
+    max-width: 100%;
+    height: auto; /* Ensures that the image's aspect ratio is maintained */
 }
 
 .loadmore {
     font-family: sans-serif;
     font-size: 20px;
     padding: 12px 20px;
-    border: 2px solid #ff914d;
+    border: 2px solid #38B6FF;
     color: #fff;
     margin: 10px 0 5px 0;
     cursor: pointer;
-    background: #ff914d;
+    background: #090549;
     text-align: center;
     outline: 0;
     border-radius: 10px;
@@ -250,7 +253,7 @@ input:hover {
 
 .loadmore:hover {
     background: #fff;
-    color: #ff914d
+    color: #38B6FF;
 }
 
 img {
@@ -282,7 +285,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #ff914d
+    color: #38B6FF;
 }
 
 .footerlink {
@@ -304,7 +307,7 @@ footer a:hover {
     color: #fff;
     margin-bottom: 5px;
     cursor: pointer;
-    background: #ff914d;
+    background: #090549;
     text-align: center;
     border-radius: 3px;
     text-decoration: none;
@@ -312,7 +315,7 @@ footer a:hover {
 }
 
 .fontslink:hover {
-    background: #ff914d;
+    background: #38B6FF
 }
 
 .copyright {
@@ -338,6 +341,37 @@ footer a:hover {
     display: none
 }
 
+.social-stack {
+    position: fixed;
+    top: 20 px;
+    left: 30px; /* Adjust horizontal position */
+    display: none;
+    align-items: center;
+    z-index: 9999; /* Ensure it's above other content */
+    transition: left 0.9s; /* Add smooth transition */
+}
+
+.social-icon {
+    display: block;
+    border: 2px solid #090549;
+    margin-right: 5px; /* Adjust spacing between icons */
+    width: 40px; /* Adjust icon width */
+    height: 40px; /* Adjust icon height */
+}
+
+/* Example icon styles */
+.facebook-icon {
+    background-image: url('../img/facebook.png'); /* Path to your Facebook icon image */
+}
+
+.twitter-icon {
+    background-image: url('../img/twitter.jpg'); /* Path to your Twitter icon image */
+}
+
+.instagram-icon {
+    background-image: url('../img/instagram.png'); /* Path to your Instagram icon image */
+}
+
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0
@@ -358,7 +392,20 @@ footer a:hover {
     }
 }
 
-@media only screen and (min-width:800px) {
+@media only screen and (min-width:768px) {
+
+    .social-stack {
+        left: 20px; /* Adjust horizontal position for smaller screens */
+        display: none;
+        
+    }
+
+    .social-icon {
+        width: 30px; /* Adjust icon width for smaller screens */
+        height: 30px; /* Adjust icon height for smaller screens */
+    }
+
+   
     .site-title a {
         margin-left: 50px;
         font-size: 30px
@@ -371,7 +418,7 @@ footer a:hover {
     .menu-links a {
         display: inline-block;
         margin: 10px 15px;
-        color: #ffff;
+        color: #38B6FF
     }
 
     .menu-links a:hover {
@@ -412,3 +459,4 @@ footer a:hover {
         display: block
     }
 }
+
